@@ -57,7 +57,7 @@ body {
 
 .res-card {
     width: 250px;
-    height: 320px;
+    height: 400px;
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
@@ -82,30 +82,59 @@ body {
 }
 
 .details {
-    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
 }
 
-.name {
+.res-info {
+    margin: 15px 18px 8px ;
     font-size: 20px;
     font-weight: 600;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    color: #222;
 }
 
 .cuisine {
-    color: #666;
-    font-size: 15px;
-    margin-bottom: 15px;
+    color: #777;
+    font-size: 16px;
+    margin:0 18px ;
+    line-height: 1.4;
+    font-weight: 500;
+    min-height: 48px;
+
 }
 
-.rating {
-    display: inline-block;
-    background: #28a745;
-    color: white;
-    padding: 4px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
+.rating,
+.cost,
+.delivery-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-value{
+  background: #00b14f;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.delivery-value,
+.cost-value{
+  font-size: 20px;
+  font-weight: bold;
+  color: #413f3f;
+}
+
+.label{
+  margin-top: 5px;
+  color:#777;
+  font-size: 13px;
 }
 
 /* Search Bar */
