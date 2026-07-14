@@ -20,12 +20,16 @@ const Header = () =>{
   )
 };
 
-const RestaurentCard = () =>{
+const RestaurentCard = (props) =>{
+  const {resName,cuisine,rating} = props;
   return(
-  <div className="image">
-    <img className="" src=""/>
-  </div>
-  
+    <div className="res-card">
+        <img className="img"
+         src="https://assets.cntraveller.in/photos/66aa0a01a5fa5da03ea872c4/4:3/w_4444,h_3333,c_limit/GettyImages-1460788301.jpg"/>
+         <h3 className="name">{resName}</h3>
+         <h4 className="cuisine">{cuisine}</h4>
+         <h4 className="rating">{rating}</h4>
+    </div>
   )
 };
 
@@ -33,9 +37,24 @@ const Body = () =>{
   return(
   <div className="body">
     <div className="search">
-      Search
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Search restaurants..."
+        />
+        <button className="search-btn">
+          Search
+        </button>
     </div>
     <div className="res-container">
+      <RestaurentCard
+      resName="Burger Kings"
+      cuisine="Burger, Chiken"
+      rating = "4.5🌟"
+       />
+      <RestaurentCard/>
+      <RestaurentCard/>
+      <RestaurentCard/>
 
     </div>
   </div>
