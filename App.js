@@ -1,22 +1,53 @@
 import React from "react";
-import ReactDOM from "react-dom/client"
+import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", {id: "parent"},
-  [
-  React.createElement("div", {id:"child1"},
-    [
-      React.createElement("h1",{id:"ch1"},"Shubham"),
-      React.createElement("h2",{id:"ch2"},"Kumar")
-    ]
-  ),
-  
-  React.createElement("div",{id:"child2"},
-    [
-      React.createElement("h1",{id:"ch3"},"Shubham"),
-      React.createElement("h2",{id:"ch4"},"Kumar")
-    ]
+
+const Header = () =>{
+  return(
+  <div className="header">
+    <div className="logo-container">
+      <img className="logo" src="https://ridershop.foodpanda.my/cdn/shop/files/foodpanda_logo-RGB_horizontal_1046x.jpg?v=1679368483" />
+    </div>
+    <div className="nav-items">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Cart</li>
+      </ul>
+    </div>
+  </div>
   )
-  ]
-)
+};
+
+const RestaurentCard = () =>{
+  return(
+  <div className="image">
+    <img className="" src=""/>
+  </div>
+  
+  )
+};
+
+const Body = () =>{
+  return(
+  <div className="body">
+    <div className="search">
+      Search
+    </div>
+    <div className="res-container">
+
+    </div>
+  </div>
+  )
+};
+
+const AppLayout = () =>{
+  return <div className="app">
+    <Header/>
+    <Body/>
+  </div>
+};
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<AppLayout/>);
